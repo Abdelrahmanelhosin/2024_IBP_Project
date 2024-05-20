@@ -1,0 +1,217 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+::selection{
+	color: $color-white;
+	background: $color-primary;
+}
+
+html,
+body{
+	scroll-behavior: smooth;
+}
+
+html{
+	font-size: 16px;
+	text-size-adjust: none;
+}
+
+body {
+	color: $color-secondary;
+	font-weight: 400;
+	font-family: $font-primary;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	color: unset;
+}
+
+button,
+button:hover,
+button:focus,
+button:active {
+	outline: none;
+}
+
+input:-webkit-autofill{
+	-webkit-text-fill-color: unset;
+	transition: background-color 5000s;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img{
+	object-fit: cover;
+}
+
+hr{
+	border-color: lighten($color-gray, $amount: 20);
+}
+
+.user-select-none{
+	pointer-events: none;
+}
+
+.list-inline{
+	font-size: 0;
+	&-item{
+		font-size: 1rem;
+	}
+}
+
+/* Custom Container Style */
+.container{
+	@include min-desktop-lg{
+		max-width: 1260px;
+	}
+}
+
+/* Common Slick Style */
+// .slick{
+// 	&-dots{
+// 		display: inline-flex;
+// 		justify-content: center;
+// 		margin-bottom: 0;
+// 		line-height: 0;
+// 		background-color: $color-primary;
+// 		padding: toRem(15) toRem(30);
+// 		border-radius: 10rem;
+// 		position: absolute;
+// 		@include min-desktop-15{
+// 			top: 50%;
+// 			right: 0;
+// 			transform: translate(250%, -50%);
+// 			flex-direction: column;
+// 			padding: toRem(35) toRem(15);
+// 		}
+// 		@include desktop-15{
+// 			top: 100%;
+// 			transform: translateY(50%);
+// 		}
+// 		li{
+// 			&:not(:last-child){
+// 				@include desktop-15{
+// 					margin-right: toRem(10);
+// 				}
+// 				@include min-desktop-15{
+// 					margin-bottom: toRem(10);
+// 				}
+// 			}
+// 			button{
+// 				font-size: 0;
+// 				width: toRem(12);
+// 				height: toRem(12);
+// 				background: rgba($color-white, $alpha: 0.5);
+// 				border: 0;
+// 				border-radius: toRem(12);
+// 				@extend %transition;
+// 			}
+// 			&.slick-active{
+// 				button{
+// 					background: $color-white;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+/* Preloader Section Style */
+.preloader{
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+
+/* Common Section Gap Style */
+.section-gap{
+	padding: 4rem 0;
+	@include desktop{
+		padding: 2rem 0;
+	}
+	&--fix{
+		padding-bottom: calc(4rem - 30px);
+		@include desktop{
+			padding-bottom: calc(2rem - 30px);
+		}
+	}
+}
+
+/* Common Section Heading Style */
+.section-header{
+	text-align: center;
+	margin-bottom: toRem(40);
+	@include mobile{
+		margin-bottom: toRem(30);
+	}
+	&__title{
+		font-family: $font-secondary;
+		font-size: toRem(35);
+		max-width: toRem(700);
+		margin-left: auto;
+		margin-right: auto;
+		@include desktop{
+			font-size: toRem(30);
+		}
+		@include mobile{
+			font-size: toRem(25);
+		}
+	}
+}
+
+/* Match Block Height Style */
+.match-height > [class*="col"]{
+	display: flex;
+}
+
+.match-height > [class*="col"] > *{
+	width: 100%;
+}
+
+.match-height > [class*="col"] > [class*="card"]{
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+}
+
+/* Full Page Height Style */
+.full-page{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* Text Box section Style */
+.text__container{
+	color: $color-white;
+	background-color: $color-primary;
+	padding: toRem(40);
+	@include mobile{
+		padding: toRem(40) toRem(15);
+	}
+	max-width: toRem(950);
+	border-radius: toRem(7);
+	box-shadow: 0 toEm(15) toEm(20) toEm(-5) rgba($color-primary, $alpha: 0.4);
+	&__text{
+        margin-bottom: 0;
+        @include min-tablet{
+            font-size: toRem(18);
+        }
+        @include min-desktop{
+            font-size: toRem(22);
+        }
+    }
+}

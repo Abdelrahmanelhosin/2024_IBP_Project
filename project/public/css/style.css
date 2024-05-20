@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --white : #fff;
+    --black : #000;
+    --main-color : #812bb2;
+    ;
+    --light-green : #cbe9e9;
+    --light-blue : #c0dff1;
+    --gray : #eeeeee;
+}
+body{
+    font-family: 'Gabarito', cursive;
+}
+.container{
+    width: 1320px;
+    margin: 0 auto;
+}
+@media (max-width : 1200px){
+    .container{
+        width: 1140px;
+    }
+}
+@media (max-width : 992px){
+    .container{
+        width: 960px;
+    }
+}
+@media (max-width : 768px){
+    .container{
+        width: 720px;
+    }
+}
+@media (max-width : 567px){
+    .container{
+        width: 540px;
+    }
+}
+header{
+    width: 100%;
+    height: 50px;
+    text-transform: capitalize;  
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+header .logo{
+    font-size: 1.2em;
+    cursor: pointer;
+    
+}
+header .container .navbar .nav-links{
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+}
+header .container .navbar .nav-links li{
+    margin: 0 25px; 
+    transition: 0.3s all ease-in;
+}
+header .container .navbar .nav-links li:hover{
+    color: var(--main-color);
+}
+.hero{
+    background-color: var(--light-green);
+}
+.hero .container{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hero .container .hero-data p{
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+.hero .container .hero-data h3{
+    text-transform: capitalize;
+    font-size: 2em;
+    width: 75%;
+    margin: 20px 0;
+}
+.hero .container .hero-data button{
+    padding: 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--white);
+    width: 150px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s all ease-in;
+}
+.hero .container .hero-data button:hover{
+    background-color: var(--white);
+    color: var(--main-color);
+    border-radius: 0px 25px 0px 25px;
+}
+.hero .container .hero-img{
+    height: 200px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+.hero .container .hero-img:hover{
+    transform: scale(1.1);
+    
+}
+.hero .container .hero-img img{
+    height: 100%;
+    margin-right: 100px;
+}
+
+
+.our-advantage .advantage-list{
+    list-style: none;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.our-advantage .advantage-list li{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.our-advantage .advantage-list li .list-icon{
+    font-size: 2em;
+    color: var(--main-color);
+}
+.our-advantage .advantage-list li div p{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+.our-advantage .advantage-list li div span{
+    text-transform: uppercase;
+    font-size: 0.7em;
+    color: #737373;
+    font-weight: 500;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.products .product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 49%;
+    border-radius: 25px;
+    padding: 25px;
+    margin-top: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.p1{
+    background-color: var(--light-blue);
+}
+.p2{
+    background-color: var(--gray);
+}
+.products .product .product-data{
+    z-index: 2;
+}
+.products .product .product-data p:first-child{
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.products .product .product-data p:nth-child(2){
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.products .product .product-data h4{
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-size: 1.7em;
+    letter-spacing: 0.5px;
+}
+.products .product .product-data button{
+    text-transform: uppercase;
+    margin-top: 16px;
+    width: 150px;
+    border: none;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
+.products .product .product-data button:hover{
+    
+    background-color: var(--main-color);
+    color: var(--white);
+    
+}
+.products .product .product-img{
+    position: absolute;
+    right: 0;
+    transform: rotateZ(-25deg);
+    transition: 0.3s all ease-in-out;
+}
+.products .product .product-img:hover{
+    transform: scale(1.2);
+}
+.new-arival-title{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.new-products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+   
+}
+.new-products .new-product{
+    width: 24%;
+    background-color: #e9ecef;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 25px;
+    overflow: hidden;
+}
+.new-products .new-product:first-child::before,.new-products .new-product:nth-child(6)::before,.new-products .new-product:nth-child(3)::before{
+    content: "New";
+    position: absolute;
+    background-color:#812bb2;
+    ;
+    padding: 5px;
+    color: white;
+    font-size: 0.75em;
+    margin-top: 15px;
+    z-index: 99;
+}
+
+.new-products .new-product .title,.new-products .new-product .price{
+   margin-top: 10px;
+   color: #343a40;
+}
+.new-products .new-product button{
+    margin-top: 10px;
+   background-color: #dee2e6;
+   color: #212529;
+   border: none;
+   width: 100%;
+   height: 35px;
+   cursor: pointer;
+   transition: 0.3s all ease-in;
+}
+.new-products .new-product button svg{
+    margin-right: 10px;
+}
+.new-products .new-product button:hover{
+   background-color: #212529;
+   color: #dee2e6;
+}
+.new-products .new-product button:hover svg{
+   color: var(--main-color);
+}
+
+.new-products .new-product img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    transition: 0.2s all ease-in;    
+}
+.new-products .new-product img:hover{
+    transform: scale(1.05);
+ 
+}
+.to-top{
+    height: 50px;
+    width: 50px;
+    background-color: var(--main-color);
+    display: none;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: var(--white);
+    cursor: pointer;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: var(--black);
+    color: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-transform: capitalize;    
+}
+
+
